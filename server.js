@@ -8,6 +8,8 @@ const signin = require('./controlers/signin');
 const profile = require('./controlers/profile');
 const image = require('./controlers/image');
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
+
 var db = require('knex')({
   client: 'pg',
   connection: {
